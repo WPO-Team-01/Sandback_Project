@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { useGetContentsQuery as UseGetContentsQuery } from "../../store/query/contentApi";
 
-const Carousel = ({ carouselContents, sectorId = 1 }) => {
+const Carousel = ({ sectorId = 1 }) => {
   const { data } = UseGetContentsQuery();
   const [contents, setContents] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
