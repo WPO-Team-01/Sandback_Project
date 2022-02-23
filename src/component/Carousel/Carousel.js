@@ -81,12 +81,12 @@ const Carousel = ({ carouselContents }) => {
         {contents.map((content, index) => (
           <SwiperSlide key={`${content.id}-${index}`} className="flex flex-row">
             <div>
-              <a href={content.link} target="_blank" rel="noreferrer">
+              <a href={content.link} rel="noreferrer">
                 <img src={content.image} alt={`${content.title}_img`} />
               </a>
             </div>
             <div>
-              <a href={content.link} target="_blank" rel="noreferrer">
+              <a href={content.link} rel="noreferrer">
                 <div>{content.title}</div>
               </a>
             </div>
