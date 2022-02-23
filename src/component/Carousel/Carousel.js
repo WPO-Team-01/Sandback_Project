@@ -51,13 +51,13 @@ const Carousel = ({ sectorId = 1 }) => {
         onActiveIndexChange={(e) => changeActiveIndex(e)}
       >
         {contents.map((content, index) => (
-          <SwiperSlide key={`${content.id}-${index}`} className="flex flex-row">
+          <SwiperSlide key={`${content.id}-${index}`}>
             <div>
               <a href={content.link} rel="noreferrer">
                 <img src={content.image} alt={`${content.title}_img`} />
               </a>
             </div>
-            <div>
+            <div className="bg-red-200">
               <a href={content.link} rel="noreferrer">
                 <div>{content.title}</div>
               </a>
