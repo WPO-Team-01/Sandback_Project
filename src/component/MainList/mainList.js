@@ -5,10 +5,18 @@ import { useEffect, useState } from 'react';
 
 function MainList() {
   const { data, error, isLoading } = useGetContentsQuery();
-  const [slice, setSlice] = useState(data.content.slice(0, 3));
+  const [contents, setContents] = useState([]);
+  console.log(data, isLoading);
+
+  useEffect(() => {
+    if (data?.ok) {
+      const newContents = data.content.slice(0, 3);
+      setContents(newContents);
+    }
+  }, [data]);
 
   const handleClick = () => {
-    setSlice(data.content);
+    setContents(data.content);
     //버튼 더보기/접기 이름도 상태에 따라 변경시키기
   };
 
@@ -23,7 +31,7 @@ function MainList() {
         <div className='w-20 h-7 bg-red-700 rounded-md text-white'>Youtube</div>
       </div>
       {!isLoading &&
-        data.content.map(el => {
+        contents.map(el => {
           if (el.sector_id === 1) {
             //data.sector.id를 1이라고 임시로 적어뒀는데, tab bar누를 때마다 sector가 변하잖아요
             //현재 sector의 상태를 store에서 관리해야 할 것 같습니다
