@@ -2,7 +2,7 @@ import "./App.css";
 import Tabs from "./components/Tabs/Tabs";
 import Carousel from "./components/Carousel/Carousel";
 import Subscribe from "./components/Subscribe/Subscribe";
-// import MainList from "./components/MainList/MainList";
+import MainList from "./components/MainList/MainList";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Tabs />
         <Carousel />
         <Subscribe />
-        {/* <MainList /> */}
+        <MainList />
       </div>
     </div>
   );

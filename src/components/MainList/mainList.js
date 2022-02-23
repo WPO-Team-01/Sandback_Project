@@ -40,8 +40,8 @@ function MainList() {
                 <div className='w-60 h-40 border-2  border-blue-900 rounded-md'>
                   <img src={el.image}></img>
                   <p>{el.upload_date}</p>
-                  <Like />
-                  <Share />
+                  {/* <Like /> */}
+                  {/* <Share /> */}
                 </div>
               </div>
             );
