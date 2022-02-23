@@ -34,9 +34,9 @@ const Carousel = ({ sectorId }) => {
 
   return (
     <div>
-      <h2 className="text-left p-4 text-lg font-bold">새로 올라왔어요</h2>
+      <h2 className="p-4 text-lg font-bold text-left">새로 올라왔어요</h2>
       {isLoading && (
-        <h3 className="text-center p-4 text-2xl font-bold">
+        <h3 className="p-4 text-2xl font-bold text-center">
           로딩 중입니다. 잠시만 기다려주세요.
         </h3>
       )}
@@ -62,9 +62,9 @@ const Carousel = ({ sectorId }) => {
           {contents.map((content, index) => (
             <SwiperSlide
               key={`${content.id}-${index}`}
-              className="h-full flex flex-col justify-center items-center gap-y-1 pb-6"
+              className="flex flex-col items-center justify-center h-full pb-6 gap-y-1"
             >
-              <div className="flex justify-center items-center">
+              <div className="flex items-center justify-center">
                 {/* a 태그 추후 상세보기 링크로 연결 필요 */}
                 <a
                   href={content.link}
@@ -78,12 +78,12 @@ const Carousel = ({ sectorId }) => {
                   />
                 </a>
               </div>
-              <div className="w-full flex justify-center items-center">
+              <div className="flex items-center justify-center w-full">
                 {/* a 태그 추후 상세보기 링크로 연결 필요 */}
                 <a
                   href={content.link}
                   rel="noreferrer"
-                  className="flex flex items-center border border-stone-400 rounded min-h-[8rem] max-h-[8rem] min-w-[24rem] max-w-sm shadow-lg font-semibold text-lg p-4"
+                  className="flex flex items-center border border-stone-400 rounded min-h-[8rem] max-h-[8rem] min-w-[24rem] max-w-sm shadow-lg font-semibold text-lg p-4 whitespace-pre-line"
                 >
                   <span>{content.title}</span>
                 </a>
