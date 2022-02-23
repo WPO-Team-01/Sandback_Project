@@ -35,18 +35,18 @@ const Carousel = ({ sectorId = 1 }) => {
   return (
     <div>
       <h2 className="text-left p-4 text-lg font-bold">새로 올라왔어요</h2>
-      {!contents.length && (
+      {isLoading && (
         <h3 className="text-center p-4 text-2xl font-bold">
           로딩 중입니다. 잠시만 기다려주세요.
         </h3>
       )}
-      {contents.length > 0 && (
+      {!isLoading && (
         <Swiper
           slidesPerView={1}
-          // autoplay={{
-          //   delay: 5000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           spaceBetween={30}
           speed={1000}
           loop={true}
