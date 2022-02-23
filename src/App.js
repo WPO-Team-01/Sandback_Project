@@ -1,6 +1,6 @@
 import "./App.css";
-import Like from "./component/Like/Like";
-import Share from "./component/Share/Share";
+import Like from "./components/Like/Like";
+import Share from "./components/Share/Share";
 
 function App() {
   return (
