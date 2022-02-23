@@ -3,6 +3,8 @@ import DetailBtn from "../components/Detail/DetailBtn";
 import DetailTitle from "../components/Detail/DetailTitle";
 import SectorTitle from "../components/Detail/SectorTitle";
 import YoutubeEmbed from "../components/Detail/YoutubeEmbed";
+import Like from "../components/Like/Like";
+import Share from "../components/Share/Share";
 import { SectorType } from "../constants/api";
 
 export default function Detail({ closeDetailPage, data }) {
@@ -19,7 +21,7 @@ export default function Detail({ closeDetailPage, data }) {
       {data.sector_id === SectorType.Insight && data.image && (
         <img src={data.image} alt="" />
       )}
-      <p>{data.body}</p>
+      <p className="whitespace-pre-line">{data.body}</p>
       <div className="flex justify-center">
         <a
           href={data.link}
@@ -29,14 +31,8 @@ export default function Detail({ closeDetailPage, data }) {
         </a>
       </div>
       <div className="flex mx-auto space-x-6">
-        <DetailBtn>
-          <HeartIcon className="w-6 h-6" />
-          <span>좋아요</span>
-        </DetailBtn>
-        <DetailBtn>
-          <ExternalLinkIcon className="w-6 h-6" />
-          <span>공유하기</span>
-        </DetailBtn>
+        <Like data={data} isDetail={true} />
+        <Share data={data} />
       </div>
     </div>
   );
