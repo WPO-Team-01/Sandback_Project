@@ -33,7 +33,7 @@ function MainList() {
 
   return (
     <div className='relative top-5 flex flex-col container w-90 h-auto rounded-md bg-white'>
-      <div className=' relative top-3 flex w-90 h-100 border-4'>
+      <div className=' relative top-3 flex w-90 h-100'>
         {/*data.sector의 인덱스에 따라서 변경해주어야함*/}
         <div className='text-xl font-normal pr-1.5'>{data.sector[1].title}</div>
         <div className='w-20 h-7 bg-red-700 rounded-md text-white'>
@@ -50,10 +50,10 @@ function MainList() {
               <div className='flex justify-center w-90 h-50 ' key={el.id}>
                 <div className='w-90 h-30'>
                   <img src={el.image}></img>
-                  <div className='w-60 h-20 bg-orange-50'>
+                  <div className='w-100 h-20'>
                     <p>{el.upload_date}</p>
-                    <Like />
-                    <Share />
+                    <Like data={el} />
+                    <Share data={el} />
                   </div>
                 </div>
               </div>
