@@ -1024,7 +1024,15 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
+<<<<<<< HEAD
 "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+=======
+<<<<<<< HEAD
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+=======
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
   version "7.17.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
   integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
@@ -1401,6 +1409,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 "@reduxjs/toolkit@^1.7.2":
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.7.2.tgz#b428aaef92582379464f9de698dbb71957eafb02"
@@ -1411,6 +1423,11 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.0.tgz#9cb1c5146ddd6a4968ad96f209c50c62f92f9879"
@@ -1763,6 +1780,10 @@
   dependencies:
     "@types/node" "*"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 "@types/hoist-non-react-statics@^3.3.0":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -1771,6 +1792,11 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 "@types/html-minifier-terser@^6.0.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz#4fc33a00c1d0c16987b1a20cf92d20614c55ac35"
@@ -1867,6 +1893,10 @@
   dependencies:
     "@types/react" "*"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 "@types/react-redux@^7.1.20":
   version "7.1.22"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-7.1.22.tgz#0eab76a37ef477cc4b53665aeaf29cb60631b72a"
@@ -1877,6 +1907,11 @@
     hoist-non-react-statics "^3.3.0"
     redux "^4.0.0"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 "@types/react@*":
   version "17.0.39"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.39.tgz#d0f4cde092502a6db00a1cded6e6bf2abb7633ce"
@@ -4311,9 +4346,15 @@ fresh@0.5.2:
   integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
 
 fs-extra@^10.0.0:
+<<<<<<< HEAD
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.1.tgz#27de43b4320e833f6867cc044bfce29fdf0ef3b8"
+  integrity sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==
+=======
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
   integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -4528,6 +4569,10 @@ he@^1.2.0:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
@@ -4535,6 +4580,11 @@ hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   dependencies:
     react-is "^16.7.0"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 hoopy@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/hoopy/-/hoopy-0.1.4.tgz#609207d661100033a9a9402ad3dea677381c1b1d"
@@ -7085,16 +7135,36 @@ react-error-overlay@^6.0.10:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.10.tgz#0fe26db4fa85d9dbb8624729580e90e7159a59a6"
   integrity sha512-mKR90fX7Pm5seCOfz8q9F+66VCc1PGsWSBxKbITjfKVQHMNF2zudxHnMdJiB1fRCb+XsbQV9sO9DCkgsMQgBIA==
 
+<<<<<<< HEAD
 react-is@^16.13.1, react-is@^16.7.0:
+=======
+<<<<<<< HEAD
+react-is@^16.13.1, react-is@^16.7.0:
+=======
+react-is@^16.13.1:
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+<<<<<<< HEAD
 react-is@^17.0.1, react-is@^17.0.2:
+=======
+<<<<<<< HEAD
+react-is@^17.0.1, react-is@^17.0.2:
+=======
+react-is@^17.0.1:
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 react-redux@^7.2.6:
   version "7.2.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.2.6.tgz#49633a24fe552b5f9caf58feb8a138936ddfe9aa"
@@ -7107,6 +7177,11 @@ react-redux@^7.2.6:
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
@@ -7219,6 +7294,10 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 redux-thunk@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.4.1.tgz#0dd8042cf47868f4b29699941de03c9301a75714"
@@ -7231,6 +7310,11 @@ redux@^4.0.0, redux@^4.1.2:
   dependencies:
     "@babel/runtime" "^7.9.2"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 regenerate-unicode-properties@^10.0.1:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-10.0.1.tgz#7f442732aa7934a3740c779bb9b3340dccc1fb56"
@@ -7328,11 +7412,20 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 reselect@^4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.5.tgz#852c361247198da6756d07d9296c2b51eddb79f6"
   integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 383c6a91058584e0ae216fadfae6e00512e4342d
+>>>>>>> b3024d2b04c1e5d6cab019acf73b72121da388ed
 resolve-cwd@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-3.0.0.tgz#0f0075f1bb2544766cf73ba6a6e2adfebcb13f2d"
