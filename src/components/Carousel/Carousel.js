@@ -5,14 +5,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { useGetContentsQuery as UseGetContentsQuery } from "../../store/query/contentApi";
+import Like from "../Like/Like";
+import Share from "../Share/Share";
 
 const Carousel = ({ sectorId = 1 }) => {
-  const { data } = UseGetContentsQuery();
+  const { data, isLoading } = UseGetContentsQuery();
   const [contents, setContents] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
-    if (data?.ok) {
+    if (!isLoading) {
       const newContents = data.content.filter(
         (article) => article.like_top === 1 && article.sector_id === sectorId
       );
@@ -85,8 +87,8 @@ const Carousel = ({ sectorId = 1 }) => {
                 </a>
               </div>
               <div className="w-full flex justify-end items-center min-w-[24rem] max-w-sm gap-4 px-4">
-                <button>좋아요</button>
-                <button>공유</button>
+                <Like></Like>
+                <Share></Share>
               </div>
             </SwiperSlide>
           ))}
