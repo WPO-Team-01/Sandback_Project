@@ -50,10 +50,10 @@ const Carousel = ({ sectorId = 1 }) => {
         <Swiper
           slidesPerView={1}
           initialSlide={1}
-          // autoplay={{
-          //   delay: 5000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           spaceBetween={30}
           speed={1000}
           loop={true}
