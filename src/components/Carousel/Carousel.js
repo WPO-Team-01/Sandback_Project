@@ -86,7 +86,7 @@ const Carousel = ({ sectorId = 1 }) => {
                   rel="noreferrer"
                   className="flex flex-col items-center border border-stone-400 rounded min-h-[8rem] max-h-[8rem] min-w-[24rem] max-w-sm shadow-lg font-semibold text-lg p-4"
                 >
-                  <div>{content.title}</div>
+                  {content.title}
                 </a>
               </div>
               {contents[activeIndex - 1] && (
