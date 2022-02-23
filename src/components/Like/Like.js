@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
 
 const Like = (props) => {
-  const { data } = props;
+  const { data, isDetail } = props;
   const [likeClicked, setLikeClicked] = useState(false);
   const [likeCount, setLikeCount] = useState(
-    () => JSON.parse(window.localStorage.getItem("likeCount")) || 0
+    () => JSON.parse(window.localStorage.getItem("likeCount")) || data.like_cnt
   );
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Like = (props) => {
         ) : (
           <MdOutlineFavorite className="mr-1 text-red-500" />
         )}
-        {data.like_cnt}
+        {isDetail ? "좋아요" : likeCount}
       </span>
     </div>
   );
