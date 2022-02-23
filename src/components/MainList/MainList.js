@@ -1,12 +1,13 @@
 import { useGetContentsQuery } from '../../store/query/contentApi';
 import Like from '../Like/Like';
 import Share from '../Share/Share';
+
 import { useEffect, useState } from 'react';
 
 function MainList() {
   const { data, error, isLoading } = useGetContentsQuery();
   const [contents, setContents] = useState([]);
-  console.log(data, isLoading);
+  // console.log(data, isLoading);
 
   useEffect(() => {
     if (data?.ok) {
@@ -36,7 +37,7 @@ function MainList() {
             //data.sector.id를 1이라고 임시로 적어뒀는데, tab bar누를 때마다 sector가 변하잖아요
             //현재 sector의 상태를 store에서 관리해야 할 것 같습니다
             return (
-              <div className='flex justify-center w-70 h-50 border-2 border-red-500'>
+              <div className='flex justify-center w-70 h-50 border-2 border-red-500' key={el.id}>
                 <div className='w-60 h-40 border-2  border-blue-900 rounded-md'>
                   <img src={el.image}></img>
                   <p>{el.upload_date}</p>
