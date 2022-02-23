@@ -3,7 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const contentApi = createApi({
   reducerPath: "contentApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "/api",
+    baseUrl:
+      "https://corsanywhere12345.herokuapp.com/https://test.daground.io/",
     prepareHeaders: (headers) => {
       headers.set("TEST-AUTH", "wantedpreonboarding");
       return headers;
