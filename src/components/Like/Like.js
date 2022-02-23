@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useGetContentsQuery } from "../../store/query/contentApi";
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
 
-const Like = () => {
-  const { data, error, isLoading } = useGetContentsQuery();
+const Like = (props) => {
+  const { data } = props;
   const [likeClicked, setLikeClicked] = useState(false);
   const [likeCount, setLikeCount] = useState(
     () => JSON.parse(window.localStorage.getItem("likeCount")) || 0
@@ -14,13 +13,19 @@ const Like = () => {
   }, [likeCount]);
 
   const likeCounting = () => {
-    setLikeClicked(!likeClicked);
-    setLikeCount(likeCount + 1);
+    setLikeClicked(!likeClicked); // 현재 상태의 반대되는 boolean값으로 변경해준다
+    if (!likeClicked) {
+      //false
+      setLikeCount(likeCount + 1);
+    } else if (likeClicked) {
+      // true
+      setLikeCount(likeCount - 1);
+    }
   };
 
-  // 새로고침 감지 시 local storage 리셋
+  // 새로고침 감지 시 local storage의 likeCount 리셋
   window.addEventListener("beforeunload", () => {
-    window.localStorage.clear();
+    window.localStorage.removeItem("likeCount");
   });
 
   return (
@@ -30,11 +35,11 @@ const Like = () => {
         className="flex justify-center items-center cursor-pointer text-slate-400"
       >
         {likeClicked === false ? (
-          <MdOutlineFavoriteBorder className="mr-2" />
+          <MdOutlineFavoriteBorder className="mr-1" />
         ) : (
-          <MdOutlineFavorite className="mr-2 text-red-500" />
+          <MdOutlineFavorite className="mr-1 text-red-500" />
         )}
-        {!isLoading && data.content[0].like_cnt}
+        {data.like_cnt}
       </span>
     </div>
   );
