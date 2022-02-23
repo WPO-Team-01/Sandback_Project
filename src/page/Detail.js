@@ -1,5 +1,3 @@
-import { ExternalLinkIcon, HeartIcon } from "@heroicons/react/outline";
-import DetailBtn from "../components/Detail/DetailBtn";
 import DetailTitle from "../components/Detail/DetailTitle";
 import SectorTitle from "../components/Detail/SectorTitle";
 import YoutubeEmbed from "../components/Detail/YoutubeEmbed";
@@ -7,6 +5,8 @@ import { SectorType } from "../constants/api";
 import { useGetContentsQuery } from "../store/query/contentApi";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Like from "../components/Like/Like";
+import Share from "../components/Share/Share";
 
 export default function Detail({ sectorTitle = "sector title" }) {
   const { id } = useParams();
@@ -47,14 +47,8 @@ export default function Detail({ sectorTitle = "sector title" }) {
         </a>
       </div>
       <div className="flex mx-auto space-x-6">
-        <DetailBtn>
-          <HeartIcon className="w-6 h-6" />
-          <span>좋아요</span>
-        </DetailBtn>
-        <DetailBtn>
-          <ExternalLinkIcon className="w-6 h-6" />
-          <span>공유하기</span>
-        </DetailBtn>
+        <Like isDetail={true} data={data} />
+        <Share data={data} />
       </div>
     </div>
   );
