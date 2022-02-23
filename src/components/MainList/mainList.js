@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 function MainList() {
   const { data, error, isLoading } = useGetContentsQuery();
   const [contents, setContents] = useState([]);
+  const [isOpen, setIsOpen] = useState('더보기');
   console.log(data, isLoading);
 
   useEffect(() => {
@@ -15,14 +16,20 @@ function MainList() {
     }
   }, [data]);
 
-  const handleClick = () => {
+  const handleOpenClick = () => {
     setContents(data.content);
-    //버튼 더보기/접기 이름도 상태에 따라 변경시키기
+    setIsOpen('접기');
+  };
+
+  const handleCloseClick = () => {
+    setContents(data.content.slice(0, 3));
+    setIsOpen('더보기');
   };
 
   if (isLoading) {
     return <div>로딩중입니다.</div>;
   }
+
   return (
     <div className='container w-80 h-auto border-2 rounded-md'>
       <div className='justify_between flex w-80 h-100 border-4 border-stone-800'>
@@ -35,8 +42,15 @@ function MainList() {
           if (el.sector_id === 1) {
             //data.sector.id를 1이라고 임시로 적어뒀는데, tab bar누를 때마다 sector가 변하잖아요
             //현재 sector의 상태를 store에서 관리해야 할 것 같습니다
+            //mainList를 컴포넌트화시키고나서
+            //props로 받아와서 sector
+            //  const test = data?.content.filter((el) => el.sector_id === 1);
+            // function MainList({ sectorContent }) {
             return (
-              <div className='flex justify-center w-70 h-50 border-2 border-red-500'>
+              <div
+                className='flex justify-center w-70 h-50 border-2 border-stone-500'
+                key={el.id}
+              >
                 <div className='w-60 h-40 border-2  border-blue-900 rounded-md'>
                   <img src={el.image}></img>
                   <p>{el.upload_date}</p>
@@ -50,10 +64,11 @@ function MainList() {
       <button
         className='w-100 h-8 bg-cyan-100 rounded-md text-blue-500'
         onClick={() => {
-          handleClick();
+          if (isOpen === '더보기') handleOpenClick();
+          if (isOpen === '접기') handleCloseClick();
         }}
       >
-        더보기
+        {isOpen}
       </button>
     </div>
   );

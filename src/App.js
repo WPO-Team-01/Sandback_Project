@@ -1,5 +1,5 @@
 import './App.css';
-import MainList from './component/MainList/mainList';
+import MainList from './components/MainList/mainList';
 
 function App() {
   return (
