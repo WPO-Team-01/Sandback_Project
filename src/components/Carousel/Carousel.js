@@ -33,6 +33,11 @@ const Carousel = ({ sectorId = 1 }) => {
     setActiveIndex(activeIndex);
   };
 
+  const moveDetailPage = (e) => {
+    e.preventDefault();
+    console.log("MOVE");
+  };
+
   return (
     <div>
       <h2 className="text-left p-4 text-lg font-bold">새로 올라왔어요</h2>
@@ -69,6 +74,9 @@ const Carousel = ({ sectorId = 1 }) => {
                 {/* a 태그 추후 상세보기 링크로 연결 필요 */}
                 <a
                   href={content.link}
+                  onClick={(e) => {
+                    moveDetailPage(e);
+                  }}
                   rel="noreferrer"
                   className="flex justify-center items-center min-h-[16rem] max-h-[16rem] min-w-[24rem] max-w-sm"
                 >
@@ -83,10 +91,13 @@ const Carousel = ({ sectorId = 1 }) => {
                 {/* a 태그 추후 상세보기 링크로 연결 필요 */}
                 <a
                   href={content.link}
+                  onClick={(e) => {
+                    moveDetailPage(e);
+                  }}
                   rel="noreferrer"
-                  className="flex flex-col items-center border border-stone-400 rounded min-h-[8rem] max-h-[8rem] min-w-[24rem] max-w-sm shadow-lg font-semibold text-lg p-4"
+                  className="flex flex items-center border border-stone-400 rounded min-h-[8rem] max-h-[8rem] min-w-[24rem] max-w-sm shadow-lg font-semibold text-lg p-4"
                 >
-                  <div>{content.title}</div>
+                  <span>{content.title}</span>
                 </a>
               </div>
               {contents[activeIndex - 1] && (

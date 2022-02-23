@@ -5,13 +5,12 @@ import { thirdValue } from "./styleObject/styleObject";
 import Page from "./Page";
 
 function Tabs() {
-  const tags = ["유튜브", "알쓸B잡", "인사이트"];
+  const tags = ["유튜브", "알쓸B잡", "인사이트", "퀴즈", "마켓"];
   const [tagIndex, setTagIndex] = useState(0);
 
   const handleTag = (index) => {
     setTagIndex(index);
   };
-  console.log(tagIndex, tagIndex * 100);
 
   return (
     <>
