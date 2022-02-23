@@ -10,13 +10,7 @@ const Share = (props) => {
     <div className="flex justify-center items-center text-slate-400">
       {!isLoading && (
         <button
-          onClick={() =>
-            window.open(
-              `${data.content[data.content.id].link}`,
-              "Popup",
-              "_blank"
-            )
-          }
+          onClick={() => window.open(`${data.link}`, "Popup", "_blank")}
           className="flex justify-center items-center "
         >
           <MdOutlineFileUpload className="mr-1" />

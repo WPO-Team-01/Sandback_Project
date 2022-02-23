@@ -16,7 +16,6 @@ const Like = (props) => {
 
   const likeCounting = () => {
     setLikeClicked(!likeClicked); // 현재 상태의 반대되는 boolean값으로 변경해준다
-    console.log(likeClicked);
     if (!likeClicked) {
       //false
       setLikeCount(likeCount + 1);
@@ -42,7 +41,7 @@ const Like = (props) => {
         ) : (
           <MdOutlineFavorite className="mr-1 text-red-500" />
         )}
-        {!isLoading && data.content[data.content.id].like_cnt}
+        {!isLoading && data.like_cnt}
       </span>
     </div>
   );
