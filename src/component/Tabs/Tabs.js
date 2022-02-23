@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Page1 from "./Page1";
-import Page2 from "./Page2";
-import Page3 from "./Page3";
+import { firstValue } from "./styleObject/styleObject";
+import { secondValue } from "./styleObject/styleObject";
+import { thirdValue } from "./styleObject/styleObject";
+import Page from "./Page";
 
 function Tabs() {
   const tags = ["유튜브", "알쓸B잡", "인사이트"];
@@ -38,9 +39,9 @@ function Tabs() {
         </nav>
       </section>
       <section className="w-[100vw] h-[100vh] whitespace-nowrap overflow-x-hidden transition-all ease-in-out duration-300 ">
-        <Page1 tagIndex={tagIndex} />
-        <Page2 tagIndex={tagIndex} />
-        <Page3 tagIndex={tagIndex} />
+        <Page tagIndex={tagIndex} marginValue={firstValue} />
+        <Page tagIndex={tagIndex} marginValue={secondValue} />
+        <Page tagIndex={tagIndex} marginValue={thirdValue} />
       </section>
     </>
   );

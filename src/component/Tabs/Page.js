@@ -1,15 +1,15 @@
 import React from "react";
 
-const Page1 = ({ tagIndex }) => {
+const Page = ({ tagIndex, marginValue }) => {
   return (
     <div
       className="absolute w-[100%] h-[100%] bg-[black] transition-all ease-in-out duration-300"
       style={
         tagIndex === 0
-          ? { marginLeft: "0%" }
+          ? { marginLeft: marginValue[0] }
           : tagIndex === 1
-          ? { marginLeft: "-100%" }
-          : { marginLeft: "-200%" }
+          ? { marginLeft: marginValue[1] }
+          : { marginLeft: marginValue[2] }
       }
     >
       Page1
@@ -17,4 +17,4 @@ const Page1 = ({ tagIndex }) => {
   );
 };
 
-export default Page1;
+export default Page;
