@@ -3,6 +3,7 @@ import DetailBtn from "../components/Detail/DetailBtn";
 import DetailTitle from "../components/Detail/DetailTitle";
 import SectorTitle from "../components/Detail/SectorTitle";
 import YoutubeEmbed from "../components/Detail/YoutubeEmbed";
+import { SectorType } from "../constants/api";
 
 // const data = {
 //   id: 62,
@@ -34,9 +35,13 @@ export default function Detail({ sectorTitle = "sector title" }) {
   return (
     <div className="flex flex-col max-w-4xl px-4 py-10 mx-auto space-y-6">
       <SectorTitle>{sectorTitle}</SectorTitle>
-      {data.sector_id === 2 && data.link && <YoutubeEmbed link={data.link} />}
+      {data.sector_id === SectorType.YouTube && data.link && (
+        <YoutubeEmbed link={data.link} />
+      )}
       <DetailTitle title={data.title} />
-      {data.sector_id === 3 && data.image && <img src={data.image} alt="" />}
+      {data.sector_id === SectorType.Insight && data.image && (
+        <img src={data.image} alt="" />
+      )}
       <p>{data.body}</p>
       <div className="flex justify-center">
         <a
