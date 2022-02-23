@@ -20,15 +20,12 @@ const Page1 = ({ tagIndex, className, styleOption, sectorId }) => {
 
   const openDetailPage = (id) => {
     setDetailStatus(true);
-    console.log(id);
-    const findContent = sector.filter((el) => el.id === id);
-    console.log(findContent);
+    const findContent = sector.filter((el) => el.id === id)[0];
     setContentData(findContent);
   };
 
   const closeDetailPage = () => {
     setDetailStatus(false);
-    setContentData({});
   };
 
   return (
@@ -45,7 +42,11 @@ const Page1 = ({ tagIndex, className, styleOption, sectorId }) => {
       {detailStatus ? (
         <Detail closeDetailPage={closeDetailPage} data={contentData} />
       ) : (
-        <Contents openDetailPage={openDetailPage} sectorContents={sector} />
+        <Contents
+          openDetailPage={openDetailPage}
+          sectorContents={sector}
+          sectorId={sectorId}
+        />
       )}
     </div>
   );

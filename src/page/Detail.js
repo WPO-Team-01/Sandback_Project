@@ -5,16 +5,16 @@ import SectorTitle from "../components/Detail/SectorTitle";
 import YoutubeEmbed from "../components/Detail/YoutubeEmbed";
 import { SectorType } from "../constants/api";
 
-export default function Detail({
-  sectorTitle = "sector title",
-  closeDetailPage,
-  data,
-}) {
+export default function Detail({ closeDetailPage, data }) {
+  console.log(data);
   return (
     <div className="flex flex-col max-w-4xl px-4 py-10 mx-auto space-y-6">
-      <SectorTitle onClick={() => closeDetailPage()}>{sectorTitle}</SectorTitle>
+      <SectorTitle onClick={closeDetailPage}>{data.title}</SectorTitle>
       {data.sector_id === SectorType.YouTube && data.link && (
         <YoutubeEmbed link={data.link} />
+      )}
+      {data.sector_id === SectorType.Opinion && data.image && (
+        <img src={data.image} alt="" />
       )}
       <DetailTitle title={data.title} />
       {data.sector_id === SectorType.Insight && data.image && (

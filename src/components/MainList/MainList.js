@@ -42,7 +42,7 @@ function MainList({ openDetail, sectorContents }) {
             >
               <div
                 className="w-60 h-40 border-2  border-blue-900 rounded-md"
-                onClick={openDetail(el.id)}
+                onClick={() => openDetail(el.id)}
               >
                 <img src={el.image}></img>
                 <p>{el.upload_date}</p>

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { useGetContentsQuery as UseGetContentsQuery } from "../../store/query/contentApi";
 
-const Carousel = ({ sectorId = 1 }) => {
+const Carousel = ({ sectorId }) => {
   const { data } = UseGetContentsQuery();
   const [contents, setContents] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -14,7 +14,7 @@ const Carousel = ({ sectorId = 1 }) => {
   useEffect(() => {
     if (data?.ok) {
       const newContents = data.content.filter(
-        (article) => article.like_top === 1 && article.sector_id === sectorId
+        (article) => article.like_top === 1 && article.sector_id === sectorId,
       );
       setContents(newContents);
     }
