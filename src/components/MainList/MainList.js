@@ -20,21 +20,18 @@ function MainList({ openDetail, sectorContents }) {
   }
 
   return (
-    <div className="container w-80 h-auto border-2 rounded-md">
-      <div className="justify_between flex w-80 h-100 border-4 border-stone-800">
+    <div className="container flex flex-col justify-center h-auto mx-auto mt-5 bg-white border-2 rounded-md w-80">
+      <div className="flex justify_between w-80 h-100">
         {/*data.sector의 인덱스에 따라서 변경해주어야함*/}
-        <div className="text-xl font-normal pr-1.5">블록체인 NOW</div>
-        <div className="w-20 h-7 bg-red-700 rounded-md text-white">Youtube</div>
+        <div className="text-xl font-normal pr-1.5 mx-auto">블록체인 NOW</div>
+        <div className="w-20 text-white rounded-md h-7">Youtube</div>
       </div>
       {!isLoading &&
         contents.map((el) => {
           return (
-            <div
-              className="flex justify-center w-70 h-50 border-2 border-red-500"
-              key={el.id}
-            >
+            <div className="flex justify-center w-70 h-50" key={el.id}>
               <div
-                className="w-60 h-40 border-2  border-blue-900 rounded-md"
+                className="h-40 my-5 rounded-md w-60"
                 onClick={() => openDetail(el.id)}
               >
                 <img src={el.image}></img>
@@ -46,7 +43,7 @@ function MainList({ openDetail, sectorContents }) {
           );
         })}
       <button
-        className="w-100 h-8 bg-cyan-100 rounded-md text-blue-500"
+        className="h-8 text-blue-500 rounded-md w-100 bg-cyan-100"
         onClick={() => {
           handleClick();
         }}
