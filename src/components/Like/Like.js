@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
-import { useGetContentsQuery } from "../../store/query/contentApi";
 
 const Like = (props) => {
   const { data } = props;
-  const { isLoading } = useGetContentsQuery();
   const [likeClicked, setLikeClicked] = useState(false);
   const [likeCount, setLikeCount] = useState(
     () => JSON.parse(window.localStorage.getItem("likeCount")) || 0
@@ -41,7 +39,7 @@ const Like = (props) => {
         ) : (
           <MdOutlineFavorite className="mr-1 text-red-500" />
         )}
-        {!isLoading && data.like_cnt}
+        {data.like_cnt}
       </span>
     </div>
   );

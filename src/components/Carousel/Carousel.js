@@ -8,10 +8,11 @@ import { useGetContentsQuery as UseGetContentsQuery } from "../../store/query/co
 import Like from "../Like/Like";
 import Share from "../Share/Share";
 
+// 탭별로 sectorId 받아서 적용
 const Carousel = ({ sectorId = 1 }) => {
   const { data, isLoading } = UseGetContentsQuery();
   const [contents, setContents] = useState([]);
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   useEffect(() => {
     if (!isLoading) {
@@ -43,6 +44,7 @@ const Carousel = ({ sectorId = 1 }) => {
       {!isLoading && (
         <Swiper
           slidesPerView={1}
+          initialSlide={1}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -55,9 +57,8 @@ const Carousel = ({ sectorId = 1 }) => {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper third:bottom-0"
-          style={{}}
           onActiveIndexChange={(e) => changeActiveIndex(e)}
+          className="mySwiper third:bottom-0"
         >
           {contents.map((content, index) => (
             <SwiperSlide
@@ -65,6 +66,7 @@ const Carousel = ({ sectorId = 1 }) => {
               className="h-full flex flex-col justify-center items-center gap-y-1 pb-6"
             >
               <div className="w-full flex justify-center items-center">
+                {/* a 태그 추후 상세보기 링크로 연결 필요 */}
                 <a
                   href={content.link}
                   rel="noreferrer"
@@ -78,6 +80,7 @@ const Carousel = ({ sectorId = 1 }) => {
                 </a>
               </div>
               <div className="w-full flex justify-center items-center">
+                {/* a 태그 추후 상세보기 링크로 연결 필요 */}
                 <a
                   href={content.link}
                   rel="noreferrer"
@@ -86,10 +89,12 @@ const Carousel = ({ sectorId = 1 }) => {
                   <div>{content.title}</div>
                 </a>
               </div>
-              <div className="w-full flex justify-end items-center min-w-[24rem] max-w-sm gap-4 px-4">
-                <Like></Like>
-                <Share></Share>
-              </div>
+              {contents[activeIndex - 1] && (
+                <div className="w-full flex justify-end items-center min-w-[24rem] max-w-sm gap-4 px-4">
+                  <Like data={contents[activeIndex - 1]}></Like>
+                  <Share data={contents[activeIndex - 1]}></Share>
+                </div>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
