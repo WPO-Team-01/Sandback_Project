@@ -6,14 +6,15 @@ const Share = () => {
   const { data, error, isLoading } = useGetContentsQuery();
 
   return (
-    <div>
-      <MdOutlineFileUpload />
+    <div className="flex justify-center items-center text-slate-400">
       {!isLoading && (
         <button
           onClick={() =>
             window.open(`${data.content[0].link}`, "Popup", "_blank")
           }
+          className="flex justify-center items-center "
         >
+          <MdOutlineFileUpload className="mr-2" />
           공유하기
         </button>
       )}
