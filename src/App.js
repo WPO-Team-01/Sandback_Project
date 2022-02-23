@@ -7,11 +7,8 @@ import MainList from "./components/MainList/MainList";
 function App() {
   return (
     <div className="App">
-      <div className='max-w-6xl mx-auto'>
+      <div className="max-w-6xl mx-auto">
         <Tabs />
-        <Carousel />
-        <Subscribe />
-        <MainList />
       </div>
     </div>
   );

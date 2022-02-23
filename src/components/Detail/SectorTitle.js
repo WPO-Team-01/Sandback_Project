@@ -1,12 +1,9 @@
 import { ChevronLeftIcon } from "@heroicons/react/outline";
-import { useNavigate } from "react-router-dom";
 
-export default function SectorTitle({ children }) {
-  const navigate = useNavigate();
-
+export default function SectorTitle({ children, closeDetailPage }) {
   return (
     <div className="flex items-center space-x-5">
-      <ChevronLeftIcon className="w-6 h-6" onClick={() => navigate(-1)} />
+      <ChevronLeftIcon className="w-6 h-6" onClick={() => closeDetailPage()} />
       <div>{children}</div>
     </div>
   );
