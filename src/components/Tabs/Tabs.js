@@ -7,7 +7,6 @@ function Tabs() {
   const handleTag = (index) => {
     setTagIndex(index);
   };
-  console.log(tagIndex, tagIndex * 100);
 
   return (
     <section className="flex flex-col items-center w-screen h-[80px] ">
@@ -19,6 +18,7 @@ function Tabs() {
             <button
               onClick={() => handleTag(index)}
               className="flex justify-center items-center w-1/5 h-full p-5 font-bold ease-in-out transition-all ease-in-out duration-300 active:text-focused whitespace-nowrap "
+              key={index}
               style={index === tagIndex ? null : { color: "#828386" }}
             >
               {/* font-size 조절이 필요합니다. */}
