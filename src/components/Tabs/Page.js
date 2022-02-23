@@ -3,7 +3,7 @@ import React from "react";
 const Page = ({ tagIndex, marginValue }) => {
   return (
     <div
-      className="absolute w-[100%] h-[100%] bg-[black] transition-all ease-in-out duration-300"
+      className="absolute w-[100%] h-[100%] bg-[white] transition-all ease-in-out duration-300"
       style={
         tagIndex === 0
           ? { marginLeft: marginValue[0] }
@@ -12,7 +12,7 @@ const Page = ({ tagIndex, marginValue }) => {
           : { marginLeft: marginValue[2] }
       }
     >
-      Page1
+      Page{tagIndex}
     </div>
   );
 };
