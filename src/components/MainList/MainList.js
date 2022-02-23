@@ -9,14 +9,6 @@ function MainList({ openDetail, sectorContents }) {
   const sectorSlice = sectorContents.slice(0, 3);
 
   const [contents, setContents] = useState(sectorSlice);
-  // console.log(data, isLoading);
-
-  // useEffect(() => {
-  //   if (sectorContents) {
-  //     const newContents = sectorContents.slice(0, 3);
-  //     setContents(newContents);
-  //   }
-  // }, [sectorContents]);
 
   const handleClick = () => {
     setContents(sectorContents);
@@ -26,6 +18,7 @@ function MainList({ openDetail, sectorContents }) {
   if (isLoading) {
     return <div>로딩중입니다.</div>;
   }
+
   return (
     <div className="container w-80 h-auto border-2 rounded-md">
       <div className="justify_between flex w-80 h-100 border-4 border-stone-800">

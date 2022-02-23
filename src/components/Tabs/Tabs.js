@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Page1 from "./Page1";
-import Page2 from "./Page2";
-import Page3 from "./Page3";
 
 import { tabStyleA, tabStyleB, tabStyleC } from "../Tab/tabApi";
 
@@ -12,7 +10,6 @@ function Tabs() {
   const handleTag = (index) => {
     setTagIndex(index);
   };
-  console.log(tagIndex, tagIndex * 100);
 
   return (
     <>
@@ -64,9 +61,6 @@ function Tabs() {
           }
           sectorId={3}
         />
-
-        {/* <Page2 tagIndex={tagIndex} /> */}
-        {/* <Page3 tagIndex={tagIndex} /> */}
       </section>
     </>
   );

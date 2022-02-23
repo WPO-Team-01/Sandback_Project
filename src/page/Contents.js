@@ -3,7 +3,6 @@ import Subscribe from "../components/Subscribe/Subscribe";
 import MainList from "../components/MainList/MainList";
 
 const Contents = ({ openDetailPage, sectorContents, sectorId }) => {
-  console.log(sectorContents);
   return (
     <>
       <Carousel sectorId={sectorId} />
